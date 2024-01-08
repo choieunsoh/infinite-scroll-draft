@@ -1,0 +1,62 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react-refresh",
+    "@typescript-eslint",
+    "@tanstack/query"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["src/**/*.test.ts", "src/**/*.test.tsx"],
+      "env": {
+        "jest": true
+      },
+      "extends": ["plugin:jest/recommended"],
+      "plugins": ["jest"]
+    }
+  ],
+  "rules": {
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "import/no-duplicates": "warn",
+    "import/no-useless-path-segments": "warn",
+    "@next/next/no-img-element": "off",
+    "react/display-name": "off",
+    "react/no-children-prop": "off",
+    "react/self-closing-comp": "error",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "vars": "all", "args": "none" }],
+    "no-use-before-define": "off",
+    "camelcase": "error",
+    "no-extra-semi": "error",
+    "no-await-in-loop": "error",
+    "no-console": "warn",
+    "no-var": "error",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "@tanstack/query/exhaustive-deps": "error",
+    "@tanstack/query/no-rest-destructuring": "warn",
+    "@tanstack/query/stable-query-client": "error"
+  }
+}
